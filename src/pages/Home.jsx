@@ -9,6 +9,7 @@ export function Home() {
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  // Update filteredProducts whenever content.data is updated
   useEffect(() => {
     if (content?.data) {
       setFilteredProducts(content.data);
@@ -41,6 +42,9 @@ export function Home() {
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-11/12 mx-auto">
         {isLoading && <p>Loading...</p>}
         {isError && <p>Failed to fetch data</p>}
+        {!isLoading && !isError && filteredProducts.length === 0 && (
+          <p className="font-semibold text-xl">No items found</p>
+        )}
         {filteredProducts &&
           filteredProducts.map((product) => (
             <div key={product.id}>
