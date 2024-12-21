@@ -5,7 +5,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Karla", "sans-serif"],
-        heading: ["Spectral", "sans-serif"],
       },
       screens: {
         "2xl": "1440px",

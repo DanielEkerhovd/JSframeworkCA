@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import "./App.css";
 import { Routes, Route } from "react-router";
 
@@ -13,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <section className="max-w-screen-2xl mx-auto w-11/12">
+      <section className="max-w-screen-2xl mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="product/:id" element={<Product />} />

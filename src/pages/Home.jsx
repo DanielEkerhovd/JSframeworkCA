@@ -5,7 +5,6 @@ import { ProductCard } from "../components/ProductCard";
 export function Home() {
   const { content, isLoading, isError } = useApi(apiPath.base);
   const products = content.data;
-  console.log(content, products);
   return (
     <>
       <h1 className="font-semibold text-2xl my-10 uppercase text-center">
