@@ -1,14 +1,9 @@
 import { create } from "zustand";
-import {
-  getLocalStorage,
-  addLocalStorage,
-} from "./handleStorage";
+import { getLocalStorage, addLocalStorage } from "./handleStorage";
 
 const loadCart = getLocalStorage("cart") || [];
 
-console.log(loadCart);
-
-export const useCart = create((set) => ({
+export const useCart = create((set, get) => ({
   cart: loadCart,
 
   addToCart: (product) => {
@@ -57,5 +52,19 @@ export const useCart = create((set) => ({
 
       return { cart: removedItem };
     });
+  },
+
+  // Get the total amount of the cart with .00 decimal
+  getTotal: () => {
+    const total = get().cart.reduce(
+      (acc, item) => acc + item.discountedPrice * item.amount,
+      0
+    );
+    return total.toFixed(2);
+  },
+
+  resetCart: () => {
+    set({ cart: [] });
+    addLocalStorage("cart", []);
   },
 }));

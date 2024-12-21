@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Karla", "sans-serif"],
+        coolTitle: ["Arvo", "serif"],
       },
       screens: {
         "2xl": "1440px",

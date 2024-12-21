@@ -7,14 +7,14 @@ export function Navbar() {
 
   const cartAmount = cart.reduce((acc, item) => acc + item.amount, 0);
 
-  
-
   return (
     <header className="mx-auto w-full max-w-screen-2xl bg-heading px-5 py-4 md:text-xl flex items-center justify-between rounded-b-sm text-white">
       <nav>
-        <ul className="flex gap-5">
+        <ul className="flex items-center gap-5">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className="text-2xl font-bold font-coolTitle">
+              ReactShop
+            </NavLink>
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
