@@ -25,7 +25,6 @@ export const useCart = create((set, get) => ({
   removeToCart: (product) => {
     set((state) => {
       const storedItem = state.cart.find((item) => item.id == product.id);
-      console.log(storedItem);
 
       let updatedCart = storedItem
         ? state.cart.map((item) =>

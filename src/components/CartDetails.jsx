@@ -2,7 +2,6 @@ import { useCart } from "../hooks/Cart";
 
 export function CartDetails() {
   const { cart, addToCart, removeToCart, clearToCart } = useCart();
-  console.log(cart);
 
   return (
     <div>
