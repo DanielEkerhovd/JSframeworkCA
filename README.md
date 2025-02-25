@@ -1,7 +1,5 @@
 # ReactShop
 
-ReactShop is a simple e-commerce website, created as a project for my 3rd semester @Noroff. The project goal is to create a functional e-commerce website, using technologies we have learned during the education. This includes the full process from an user story to a finished product.
-
 ![reactshop](https://github.com/user-attachments/assets/94f417a3-5d79-4a97-a93b-7eaf23d420f1)
 
 ## Table of Contents
